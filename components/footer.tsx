@@ -1,21 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { BlueSkyLogo, DribbleLogo, GithubLogo, XLogo } from "./icons";
-
-const footerLinks = [
-  {
-    title: "About",
-    href: "#about",
-  },
-  {
-    title: "Experience",
-    href: "#experience",
-  },
-  {
-    title: "Projects",
-    href: "#projects",
-  },
-];
+import { GithubLogo, LinkedInLogo } from "./icons";
 
 const Footer = () => {
   return (
@@ -41,18 +26,7 @@ const Footer = () => {
             />
           </svg>
 
-          <ul className="mt-6 flex items-center gap-4 flex-wrap">
-            {footerLinks.map(({ title, href }) => (
-              <li key={title}>
-                <Link
-                  href={href}
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  {title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {/* Navigation links removed per request */}
         </div>
         <Separator />
         <div className="py-6 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
@@ -61,18 +35,12 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} John Doe. All rights reserved.
           </span>
 
-          <div className="flex items-center gap-5 text-muted-foreground">
+          <div className="hidden sm:flex items-center gap-5 text-muted-foreground">
             <Link href="#" target="_blank">
               <GithubLogo className="h-5 w-5" />
             </Link>
             <Link href="#" target="_blank">
-              <XLogo className="h-5 w-5" />
-            </Link>
-            <Link href="#" target="_blank">
-              <BlueSkyLogo className="h-5 w-5" />
-            </Link>
-            <Link href="#" target="_blank">
-              <DribbleLogo className="h-5 w-5" />
+              <LinkedInLogo className="h-5 w-5" />
             </Link>
           </div>
         </div>

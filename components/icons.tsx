@@ -59,3 +59,18 @@ export const DribbleLogo = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
+
+export const LinkedInLogo = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    role="img"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <title>LinkedIn</title>
+    <path
+      className="fill-current"
+      d="M20.451 20.451h-3.554v-5.569c0-1.328-.027-3.037-1.851-3.037-1.853 0-2.136 1.447-2.136 2.941v5.665H9.356V9h3.414v1.561h.049c.476-.9 1.637-1.851 3.369-1.851 3.602 0 4.27 2.371 4.27 5.455v6.286zM5.337 7.433a2.064 2.064 0 1 1 0-4.129 2.064 2.064 0 0 1 0 4.129zM3.559 20.451h3.556V9H3.559v11.451z"
+    />
+  </svg>
+);
