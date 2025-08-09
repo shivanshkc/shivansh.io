@@ -15,10 +15,10 @@ const About = () => {
 
           {/* Content */}
           <div className="flex-1 md:text-left">
-            <Badge variant="secondary" className="mb-4">
+            <Badge variant="secondary" className="mb-4 block w-fit mx-auto md:mx-0">
               About Me
             </Badge>
-            <ProfileImage className="mt-3 mb-8 block md:hidden" />
+            <ProfileImage className="mt-3 mb-8 block md:hidden mx-auto" />
             <h2 className="text-4xl font-bold mb-4 tracking-tight">
               Passionate about creating impactful web experiences
             </h2>
@@ -52,8 +52,8 @@ const ProfileImage = ({
   ...props
 }: HTMLAttributes<HTMLDivElement>) => (
   <div className={cn("mt-10 w-48 h-48 md:w-64 md:h-64", className)} {...props}>
-    <div className="relative w-full h-full rounded-2xl overflow-hidden bg-accent">
-      <Image src="/placeholder.svg" alt="" className="object-cover" fill />
+    <div className="relative w-full h-full rounded-full overflow-hidden bg-accent">
+      <Image src="/profile.jpg" alt="" className="object-cover" fill />
     </div>
   </div>
 );
