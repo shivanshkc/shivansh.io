@@ -5,6 +5,14 @@ import Image from "next/image";
 import { GithubLogo } from "./icons";
 import content from "@/public/content.json";
 
+interface ContentProject {
+  name: string;
+  description: string;
+  technologies: string[];
+  demo_link?: string;
+  github_link?: string;
+}
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -77,13 +85,17 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
-  const projects = (content.projects || []).map((p) => ({
+  const rawProjects: ContentProject[] = Array.isArray(content.projects)
+    ? (content.projects as ContentProject[])
+    : [];
+
+  const projects = rawProjects.map((p) => ({
     title: p.name,
     description: p.description,
     image: "/placeholder.svg",
     technologies: p.technologies,
-    liveUrl: (p as any).demo_link,
-    githubUrl: (p as any).github_link,
+    liveUrl: p.demo_link,
+    githubUrl: p.github_link,
   }));
 
   return (
