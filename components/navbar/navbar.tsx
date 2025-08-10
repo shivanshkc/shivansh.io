@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { GithubLogo, LinkedInLogo } from "../icons";
-import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 import Link from "next/link";
 import content from "@/public/content.json";
@@ -9,7 +8,10 @@ const Navbar = () => {
   return (
     <nav className="fixed z-10 top-6 inset-x-4 h-14 bg-background border dark:border-slate-700/70 max-w-screen-md mx-auto rounded-full">
       <div className="h-full grid grid-cols-[1fr_auto_1fr] items-center mx-auto px-3">
-        <Logo />
+        {/* Branding */}
+        <div className="text-base sm:text-lg font-semibold tracking-tight">
+          {content.brand}
+        </div>
 
         {/* Desktop Menu */}
         <NavMenu className="hidden md:block justify-self-center" />
