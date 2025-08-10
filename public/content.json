@@ -1,0 +1,41 @@
+{
+    "brand": "John D.",
+    "name": "John Doe",
+    "title": "Senior Software Engineer",
+    "bio": "I build scalable, elegant web applications end-to-end. From crafting beautiful frontends to running robust backends, I bring ideas to life with clean code and thoughtful design. Let's create something amazing together.",
+    "email": "john.doe@example.com",
+    "linkedin": "https://www.linkedin.com/in/john-doe",
+    "github": "https://github.com/john-doe",
+    "experience": [
+        {
+            "company": "Google",
+            "title": "Software Engineer",
+            "dates": "2020 - 2022",
+            "description": "I worked on the Google Maps team, building the maps backend.",
+            "technologies": ["React", "Node.js", "MongoDB"]
+        },
+        {
+            "company": "Apple",
+            "title": "Software Engineer",
+            "dates": "2022 - 2024",
+            "description": "I worked on the Apple Maps team, building the maps backend.",
+            "technologies": ["React", "Node.js", "MongoDB"]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Project 1",
+            "description": "I worked on the Google Maps team, building the maps backend.",
+            "technologies": ["React", "Node.js", "MongoDB"],
+            "demo_link": "https://www.google.com",
+            "github_link": "https://www.google.com"
+        },
+        {
+            "name": "Project 2",
+            "description": "I worked on the Apple Maps team, building the maps backend.",
+            "technologies": ["React", "Node.js", "MongoDB"],
+            "demo_link": "https://www.google.com",
+            "github_link": "https://www.google.com"
+        }
+    ]
+}

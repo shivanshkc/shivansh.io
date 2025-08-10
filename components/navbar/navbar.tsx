@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { GithubLogo, LinkedInLogo } from "../icons";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
+import Link from "next/link";
+import content from "@/public/content.json";
 
 const Navbar = () => {
   return (
@@ -13,20 +15,24 @@ const Navbar = () => {
         <NavMenu className="hidden md:block justify-self-center" />
 
         <div className="flex items-center gap-2 justify-self-end col-start-3">
-          <Button
-            variant="outline"
-            className="rounded-full shadow-none"
-            size="icon"
-          >
-            <LinkedInLogo className="h-5 w-5" />
-          </Button>
-          <Button
-            variant="outline"
-            className="rounded-full shadow-none"
-            size="icon"
-          >
-            <GithubLogo className="h-5! w-5!" />
-          </Button>
+          <Link href={content.linkedin} target="_blank">
+            <Button
+              variant="outline"
+              className="rounded-full shadow-none"
+              size="icon"
+            >
+              <LinkedInLogo className="h-5 w-5" />
+            </Button>
+          </Link>
+          <Link href={content.github} target="_blank">
+            <Button
+              variant="outline"
+              className="rounded-full shadow-none"
+              size="icon"
+            >
+              <GithubLogo className="h-5! w-5!" />
+            </Button>
+          </Link>
 
           {/* Mobile Menu removed: links are hidden on mobile as requested */}
         </div>
