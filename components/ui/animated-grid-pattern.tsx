@@ -1,15 +1,15 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
 interface AnimatedGridPatternProps {
   width?: number;
   height?: number;
-  x?: number;
-  y?: number;
+  offsetX?: number;
+  offsetY?: number;
   strokeDasharray?: string | number;
   numSquares?: number;
   className?: string;
@@ -21,8 +21,8 @@ interface AnimatedGridPatternProps {
 export default function AnimatedGridPattern({
   width = 40,
   height = 40,
-  x = -1,
-  y = -1,
+  offsetX = -1,
+  offsetY = -1,
   strokeDasharray = 0,
   numSquares = 50,
   className,
@@ -33,22 +33,21 @@ export default function AnimatedGridPattern({
   const id = useId();
   const containerRef = useRef(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [squares, setSquares] = useState(() => generateSquares(numSquares));
+  const [squares, setSquares] = useState<{ id: number; pos: [number, number] }[]>([]);
 
-  function getPos() {
+  const getPos = useCallback((): [number, number] => {
     return [
       Math.floor((Math.random() * dimensions.width) / width),
       Math.floor((Math.random() * dimensions.height) / height),
-    ];
-  }
+    ] as [number, number];
+  }, [dimensions.width, dimensions.height, width, height]);
 
   // Adjust the generateSquares function to return objects with an id, x, and y
-  function generateSquares(count: number) {
-    return Array.from({ length: count }, (_, i) => ({
-      id: i,
-      pos: getPos(),
-    }));
-  }
+  const generateSquares = useCallback(
+    (count: number) =>
+      Array.from({ length: count }, (_, i) => ({ id: i, pos: getPos() })),
+    [getPos]
+  );
 
   // Function to update a single square's position
   const updateSquarePosition = (id: number) => {
@@ -69,7 +68,7 @@ export default function AnimatedGridPattern({
     if (dimensions.width && dimensions.height) {
       setSquares(generateSquares(numSquares));
     }
-  }, [dimensions, numSquares]);
+  }, [dimensions.width, dimensions.height, numSquares, generateSquares]);
 
   // Resize observer to update container dimensions
   useEffect(() => {
@@ -82,16 +81,18 @@ export default function AnimatedGridPattern({
       }
     });
 
-    if (containerRef.current) {
-      resizeObserver.observe(containerRef.current);
+    const el = containerRef.current;
+    if (el) {
+      resizeObserver.observe(el);
     }
 
     return () => {
-      if (containerRef.current) {
-        resizeObserver.unobserve(containerRef.current);
+      if (el) {
+        resizeObserver.unobserve(el);
       }
+      resizeObserver.disconnect();
     };
-  }, [containerRef]);
+  }, []);
 
   return (
     <svg
@@ -109,8 +110,8 @@ export default function AnimatedGridPattern({
           width={width}
           height={height}
           patternUnits="userSpaceOnUse"
-          x={x}
-          y={y}
+          x={offsetX}
+          y={offsetY}
         >
           <path
             d={`M.5 ${height}V.5H${width}`}
@@ -120,23 +121,23 @@ export default function AnimatedGridPattern({
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill={`url(#${id})`} />
-      <svg x={x} y={y} className="overflow-visible">
-        {squares.map(({ pos: [x, y], id }, index) => (
+      <svg x={offsetX} y={offsetY} className="overflow-visible">
+        {squares.map(({ pos: [cellX, cellY], id }) => (
           <motion.rect
             initial={{ opacity: 0 }}
             animate={{ opacity: maxOpacity }}
             transition={{
               duration,
               repeat: 1,
-              delay: index * 0.1,
+              delay: id * 0.1,
               repeatType: "reverse",
             }}
             onAnimationComplete={() => updateSquarePosition(id)}
-            key={`${x}-${y}-${index}`}
+            key={id}
             width={width - 1}
             height={height - 1}
-            x={x * width + 1}
-            y={y * height + 1}
+            x={cellX * width + 1}
+            y={cellY * height + 1}
             fill="currentColor"
             strokeWidth="0"
           />

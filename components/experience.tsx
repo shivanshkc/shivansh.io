@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Building2, Calendar } from "lucide-react";
+import content from "@/public/content.json";
 
 interface ExperienceItemProps {
   title: string;
@@ -52,32 +53,13 @@ const ExperienceItem = ({
 };
 
 const Experience = () => {
-  const experiences = [
-    {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      period: "2021 - Present",
-      description:
-        "Led the development of enterprise-scale web applications, mentored junior developers, and implemented best practices for code quality and performance optimization.",
-      technologies: ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Digital Innovations Inc",
-      period: "2019 - 2021",
-      description:
-        "Developed and maintained multiple client projects, implemented responsive designs, and integrated third-party APIs for enhanced functionality.",
-      technologies: ["React", "Express.js", "PostgreSQL", "Docker", "Redis"],
-    },
-    {
-      title: "Frontend Developer",
-      company: "WebTech Studios",
-      period: "2018 - 2019",
-      description:
-        "Created responsive and interactive user interfaces, collaborated with designers, and optimized application performance.",
-      technologies: ["React", "JavaScript", "SASS", "Webpack", "Jest"],
-    },
-  ];
+  const experiences = (content.experience || []).map((item) => ({
+    title: item.title,
+    company: item.company,
+    period: item.dates,
+    description: item.description,
+    technologies: item.technologies,
+  }));
 
   return (
     <section id="experience" className="relative py-20 px-6">
