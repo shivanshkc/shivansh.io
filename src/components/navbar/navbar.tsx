@@ -1,7 +1,9 @@
 import Link from "next/link";
+
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import { Github, LinkedIn } from "@/components/icons";
+import content from "~/public/content.json";
 
 /**
  * Simple Navbar Component
@@ -20,7 +22,7 @@ const Navbar = () => {
     const links = [
         { label: "Experience", href: "/experience" },
         { label: "Projects", href: "/projects" },
-        { label: "Skillset", href: "/skills" },
+        { label: "Skillset", href: "/skillset" },
         { label: "Contact", href: "/contact" }
     ];
 
@@ -40,7 +42,7 @@ const Navbar = () => {
                     max-w-3xl: max width 48rem
                     mx-auto: margin left/right auto (centers the element)
                 */}
-                
+
                 {/* Brand */}
                 <div className="text-base sm:text-lg font-semibold tracking-tight">
                     {/* 
@@ -49,7 +51,7 @@ const Navbar = () => {
                         font-semibold: font weight 600
                         tracking-tight: letter spacing -0.025em
                     */}
-                    Shivansh K.
+                    {content.branding}
                 </div>
 
                 {/* Navigation Links */}
@@ -81,7 +83,7 @@ const Navbar = () => {
                         flex: display flex
                         gap-2: gap 0.5rem between child elements
                     */}
-                    <Link href="#" target="_blank">
+                    <Link href={content.linkedinURL} target="_blank">
                         <Button
                             variant="outline"
                             className="rounded-full shadow-none"
@@ -95,7 +97,7 @@ const Navbar = () => {
                             {/* h-5: height 1.25rem, w-5: width 1.25rem */}
                         </Button>
                     </Link>
-                    <Link href="#" target="_blank">
+                    <Link href={content.githubURL} target="_blank">
                         <Button
                             variant="outline"
                             className="rounded-full shadow-none"
