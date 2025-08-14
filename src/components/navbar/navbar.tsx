@@ -7,9 +7,9 @@ import { Github, LinkedIn } from "@/components/icons";
  * Simple Navbar Component
  * 
  * A minimal navigation bar with:
- * - Left: Brand ("Shivansh K.")
- * - Center: Navigation links
- * - Right: Icon buttons
+ * - Branding on the far left.
+ * - Navigation links in the center.
+ * - Contact icon buttons on the right.
  * 
  * @component
  */
@@ -25,15 +25,43 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="pt-6 px-4">
+        <nav className="pt-6 px-4"> {/* pt-6: padding-top 1.5rem, px-4: padding-left/right 1rem */}
             <div className="relative flex items-center justify-between p-2.5 border rounded-full bg-background w-full max-w-3xl mx-auto">
+                {/* 
+                    relative: position relative (for absolute positioned children)
+                    flex: display flex
+                    items-center: align items to center vertically
+                    justify-between: space items apart with space between
+                    p-2.5: padding 0.625rem on all sides
+                    border: 1px border
+                    rounded-full: fully rounded corners (pill shape)
+                    bg-background: background color from theme
+                    w-full: width 100%
+                    max-w-3xl: max width 48rem
+                    mx-auto: margin left/right auto (centers the element)
+                */}
+                
                 {/* Brand */}
                 <div className="text-base sm:text-lg font-semibold tracking-tight">
+                    {/* 
+                        text-base: font size 1rem (16px)
+                        sm:text-lg: font size 1.125rem (18px) on small screens and up
+                        font-semibold: font weight 600
+                        tracking-tight: letter spacing -0.025em
+                    */}
                     Shivansh K.
                 </div>
 
-                {/* Navigation Links - Absolutely centered */}
+                {/* Navigation Links */}
                 <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+                    {/* 
+                        hidden: display none
+                        md:block: display block on medium screens and up
+                        absolute: position absolute
+                        left-1/2: left position 50%
+                        transform: enable CSS transforms
+                        -translate-x-1/2: translate X by -50% (centers the element)
+                    */}
                     <NavigationMenu>
                         <NavigationMenuList>
                             {links.map(link => (
@@ -49,13 +77,22 @@ const Navbar = () => {
 
                 {/* Icon Buttons */}
                 <div className="flex gap-2">
+                    {/* 
+                        flex: display flex
+                        gap-2: gap 0.5rem between child elements
+                    */}
                     <Link href="#" target="_blank">
                         <Button
                             variant="outline"
                             className="rounded-full shadow-none"
                             size="icon"
                         >
+                            {/* 
+                                rounded-full: fully rounded corners
+                                shadow-none: remove default shadow
+                            */}
                             <LinkedIn className="h-5 w-5" />
+                            {/* h-5: height 1.25rem, w-5: width 1.25rem */}
                         </Button>
                     </Link>
                     <Link href="#" target="_blank">
