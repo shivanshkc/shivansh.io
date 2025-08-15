@@ -7,12 +7,12 @@ import content from "~/public/content.json";
 
 /**
  * Simple Navbar Component
- * 
+ *
  * A minimal navigation bar with:
  * - Branding on the far left.
  * - Navigation links in the center.
  * - Contact icon buttons on the right.
- * 
+ *
  * @component
  */
 const Navbar = () => {
@@ -27,9 +27,15 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="pt-6 px-4"> {/* pt-6: padding-top 1.5rem, px-4: padding-left/right 1rem */}
+        <nav className="fixed top-6 left-0 right-0 z-5">
+            {/*
+                fixed: fixed position,
+                top-6 left-0 right-0: Some distance from top
+                z-5: high z-index
+            */}
+
             <div className="relative flex items-center justify-between p-2.5 border rounded-full bg-background w-full max-w-3xl mx-auto">
-                {/* 
+                {/*
                     relative: position relative (for absolute positioned children)
                     flex: display flex
                     items-center: align items to center vertically
@@ -45,7 +51,7 @@ const Navbar = () => {
 
                 {/* Brand */}
                 <div className="text-base sm:text-lg font-semibold tracking-tight">
-                    {/* 
+                    {/*
                         text-base: font size 1rem (16px)
                         sm:text-lg: font size 1.125rem (18px) on small screens and up
                         font-semibold: font weight 600
@@ -56,7 +62,7 @@ const Navbar = () => {
 
                 {/* Navigation Links */}
                 <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
-                    {/* 
+                    {/*
                         hidden: display none
                         md:block: display block on medium screens and up
                         absolute: position absolute
@@ -79,17 +85,17 @@ const Navbar = () => {
 
                 {/* Icon Buttons */}
                 <div className="flex gap-2">
-                    {/* 
+                    {/*
                         flex: display flex
                         gap-2: gap 0.5rem between child elements
                     */}
-                    <Link href={content.linkedinURL} target="_blank">
+                    <Link href={content.linkedin} target="_blank">
                         <Button
                             variant="outline"
                             className="rounded-full shadow-none"
                             size="icon"
                         >
-                            {/* 
+                            {/*
                                 rounded-full: fully rounded corners
                                 shadow-none: remove default shadow
                             */}
@@ -97,7 +103,7 @@ const Navbar = () => {
                             {/* h-5: height 1.25rem, w-5: width 1.25rem */}
                         </Button>
                     </Link>
-                    <Link href={content.githubURL} target="_blank">
+                    <Link href={content.github} target="_blank">
                         <Button
                             variant="outline"
                             className="rounded-full shadow-none"
