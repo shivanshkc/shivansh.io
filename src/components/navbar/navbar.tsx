@@ -27,11 +27,12 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed top-6 left-0 right-0 z-5">
+        <nav className="fixed top-6 left-0 right-0 z-5 px-4">
             {/*
                 fixed: fixed position,
                 top-6 left-0 right-0: Some distance from top
                 z-5: high z-index
+                px-4: Horizontal padding
             */}
 
             <div className="relative flex items-center justify-between p-2.5 border rounded-full bg-background w-full max-w-3xl mx-auto">
