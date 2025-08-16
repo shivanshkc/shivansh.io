@@ -83,5 +83,23 @@
             ],
             "github": "https://github.com/shivanshkc/lightshow"
         }
+    ],
+    "skillset": [
+        {
+            "category": "Programming Languages",
+            "skills": ["Go", "TypeScript", "JavaScript", "Python", "TLA+"]
+        },
+        {
+            "category": "Databases",
+            "skills": ["PostgreSQL", "MongoDB", "CouchDB", "Redis", "Elasticsearch", "AWS S3"]
+        },
+        {
+            "category": "APIs & Protocols",
+            "skills": ["REST APIs", "gRPC", "Protocol Buffers", "WebSockets", "OAuth2", "PKCE"]
+        },
+        {
+            "category": "Other Technologies",
+            "skills": ["Apache Kafka", "Apache Zookeeper", "Docker", "Hyperledger Fabric Blockchain", "NGINX"]
+        }
     ]
 }
