@@ -4,6 +4,22 @@
     "branding": "Shivansh K.",
     "title": "Senior Software Engineer",
     "bio": "I build resilient and scalable backend services with Go. My expertise lies in solving complex problems in distributed systems, focusing on system architecture, performance, and delivering high-quality, reliable code.",
+    "experience": [
+        {
+            "company": "Red Hat Inc.",
+            "title": "Senior Software Engineer",
+            "period": "2021 - Present",
+            "description": "I develop systems that integrate with AWS and Azure marketplace APIs, schedule jobs, and run state transitions to automate the management of Private Offers for Red Hat customers.",
+            "technologies": ["Go", "PostgreSQL", "REST APIs", "Kafka", "Transactions"]
+        },
+        {
+            "company": "KNNX Corp.",
+            "title": "Software Engineer",
+            "period": "2019 - 2021",
+            "description": "I built a multi-tenant business Rules Engine on Hyperledger Fabric, using Node.js to create secure REST APIs and a WebSocket handler for fast, safe rule evaluation.",
+            "technologies": ["Node.js", "Blockchain", "Multi-tenancy", "OAuth2", "CouchDB", "Websockets"]
+        }
+    ],
     "linkedin": "https://linkedin.com/in/shivanshk",
     "github": "https://github.com/shivanshkc"
 }
