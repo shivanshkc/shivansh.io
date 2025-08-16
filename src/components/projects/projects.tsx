@@ -13,11 +13,12 @@ const Projects = () => {
     const projects: ProjectCardProps[] = content.projects;
 
     return (
-        <section id="projects" className="relative min-h-screen px-6 flex items-center justify-center scroll-mt-[20vh]">
+        <section id="projects" className="relative min-h-screen px-6 py-16 flex items-center justify-center scroll-mt-[20vh]">
             {/*
                 relative: position relative (for absolute positioned children)
                 min-h-screen: minimum height 100vh (full viewport height)
                 px-6: padding left/right 1.5rem
+                py-16: padding top/bottom 4rem (ensures consistent spacing between sections)
                 flex: display flex
                 items-center: align items to center vertically
                 justify-center: center items horizontally
