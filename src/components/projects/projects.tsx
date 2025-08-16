@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import content from "~/public/content.json";
@@ -5,6 +7,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { Github } from "@/components/icons";
+import { useState } from "react";
 
 const Projects = () => {
     const projects: ProjectCardProps[] = content.projects;
@@ -161,16 +164,19 @@ const ProjectCard = (props: ProjectCardProps) => {
                     flex: display flex
                     gap-3: gap 0.75rem between child elements
                 */}
-                <Button variant="default" className="rounded-full" asChild>
+                <Button
+                    variant="default"
+                    className="rounded-full"
+                    onClick={() => alert("This demo is currently under development. Please check back soon!")}
+                >
                     {/*
+                        variant="default": primary button style
                         rounded-full: fully rounded corners (pill shape)
-                        asChild: render as child element (anchor tag)
+                        onClick: shows under development message when clicked
                     */}
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-1 h-4 w-4" />
-                        {/* mr-1: margin right 0.25rem, h-4: height 1rem, w-4: width 1rem */}
-                        Live Demo
-                    </a>
+                    <ExternalLink className="mr-1 h-4 w-4" />
+                    {/* mr-1: margin right 0.25rem, h-4: height 1rem, w-4: width 1rem */}
+                    Live Demo
                 </Button>
                 <Button
                     variant="outline"
