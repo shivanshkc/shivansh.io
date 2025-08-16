@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import Experience from "@/components/experience";
 import Projects from "@/components/projects";
 import Skillset from "@/components/skillset";
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <Skillset />
+      <Contact />
     </div>
   );
 }

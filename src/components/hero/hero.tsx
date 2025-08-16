@@ -124,7 +124,7 @@ const Hero = () => {
                             text-base: font size 1rem (16px)
                             asChild: render as child element (anchor tag)
                         */}
-                        <a href="#">
+                        <a href="#contact">
                             <Mail className="mr-2 h-5 w-5" />
                             {/* mr-2: margin right 0.5rem, h-5: height 1.25rem, w-5: width 1.25rem */}
                             Contact Me
@@ -135,7 +135,7 @@ const Hero = () => {
                             variant="outline": outlined button style
                             Other classes same as above
                         */}
-                        <a href="# ">
+                        <a href="/shivansh-resume.pdf" download>
                             <Download className="mr-2 h-5 w-5" />
                             Download CV
                         </a>
