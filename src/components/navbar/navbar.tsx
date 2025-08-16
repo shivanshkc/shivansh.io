@@ -51,15 +51,17 @@ const Navbar = () => {
                 */}
 
                 {/* Brand */}
-                <div className="text-base sm:text-lg font-semibold tracking-tight">
+                <Link href="#" className="text-base sm:text-lg font-semibold tracking-tight hover:text-primary transition-colors">
                     {/*
                         text-base: font size 1rem (16px)
                         sm:text-lg: font size 1.125rem (18px) on small screens and up
                         font-semibold: font weight 600
                         tracking-tight: letter spacing -0.025em
+                        hover:text-primary: primary color on hover
+                        transition-colors: smooth color transition
                     */}
                     {content.branding}
-                </div>
+                </Link>
 
                 {/* Navigation Links */}
                 <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
