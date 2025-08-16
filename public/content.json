@@ -4,22 +4,84 @@
     "branding": "Shivansh K.",
     "title": "Senior Software Engineer",
     "bio": "I build resilient and scalable backend services with Go. My expertise lies in solving complex problems in distributed systems, focusing on system architecture, performance, and delivering high-quality, reliable code.",
+    "linkedin": "https://linkedin.com/in/shivanshk",
+    "github": "https://github.com/shivanshkc",
     "experience": [
         {
             "company": "Red Hat Inc.",
             "title": "Senior Software Engineer",
             "period": "2021 - Present",
             "description": "I develop systems that integrate with AWS and Azure marketplace APIs, schedule jobs, and run state transitions to automate the management of Private Offers for Red Hat customers.",
-            "technologies": ["Go", "PostgreSQL", "REST APIs", "Kafka", "Transactions"]
+            "technologies": [
+                "Go",
+                "PostgreSQL",
+                "REST APIs",
+                "Kafka",
+                "Transactions"
+            ]
         },
         {
             "company": "KNNX Corp.",
             "title": "Software Engineer",
             "period": "2019 - 2021",
             "description": "I built a multi-tenant business Rules Engine on Hyperledger Fabric, using Node.js to create secure REST APIs and a WebSocket handler for fast, safe rule evaluation.",
-            "technologies": ["Node.js", "Blockchain", "Multi-tenancy", "OAuth2", "CouchDB", "Websockets"]
+            "technologies": [
+                "Node.js",
+                "Blockchain",
+                "Multi-tenancy",
+                "OAuth2",
+                "CouchDB",
+                "Websockets"
+            ]
         }
     ],
-    "linkedin": "https://linkedin.com/in/shivanshk",
-    "github": "https://github.com/shivanshkc"
+    "projects": [
+        {
+            "name": "Kevlar",
+            "description": "A novel consensus algorithm ready to compete with Paxos and Raft.",
+            "image": "/placeholder.svg",
+            "technologies": [
+                "Distributed Systems",
+                "Consensus Algorithms"
+            ],
+            "github": "#"
+        },
+        {
+            "name": "Rosenbridge",
+            "description": "A distributed websocket hub for real-time communication.",
+            "image": "/placeholder.svg",
+            "technologies": [
+                "Go",
+                "Websockets",
+                "gRPC",
+                "MongoDB"
+            ],
+            "github": "https://github.com/shivanshkc/rosenbridge"
+        },
+        {
+            "name": "Authorizer",
+            "description": "A PKCE-enabled OAuth implementation extensible for any identity provider.",
+            "image": "/placeholder.svg",
+            "technologies": [
+                "OAuth2",
+                "GCP",
+                "PKCE",
+                "Go",
+                "PostgreSQL"
+            ],
+            "github": "https://github.com/shivanshkc/authorizer"
+        },
+        {
+            "name": "Lightshow",
+            "description": "A highly concurrent raytracer written purely in Go.",
+            "image": "/placeholder.svg",
+            "technologies": [
+                "Go",
+                "Graphics",
+                "Mathematics",
+                "Concurrency"
+            ],
+            "github": "https://github.com/shivanshkc/lightshow"
+        }
+    ]
 }
