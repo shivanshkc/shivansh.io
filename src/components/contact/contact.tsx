@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { Github, LinkedIn } from "@/components/icons";
 import { Mail, Send } from "lucide-react";
 import content from "~/public/content.json";
@@ -173,19 +174,19 @@ const Contact = () => {
                 </div>
 
                 {/* Separator */}
-                <div className="flex items-center justify-center mb-6">
+                <div className="flex items-center justify-center mb-6 max-w-xs mx-auto">
                     {/*
                         flex: display flex
                         items-center: align items to center vertically
                         justify-center: center items horizontally
-                        mb-8: margin bottom 2rem
-                    */}
-                    <div className="flex-1 h-px bg-border max-w-xs"></div>
-                    {/*
-                        flex-1: takes available space
-                        h-px: height 1px
-                        bg-border: border color from theme
+                        mb-6: margin bottom 1.5rem
                         max-w-xs: max width 20rem (320px)
+                        mx-auto: margin left/right auto (centers the element)
+                    */}
+                    <Separator className="flex-1" />
+                    {/*
+                        Separator: shadcn/ui component providing consistent design system styling
+                        flex-1: takes available space
                     */}
                     <span className="px-4 text-sm text-muted-foreground">or</span>
                     {/*
@@ -193,7 +194,7 @@ const Contact = () => {
                         text-sm: font size 0.875rem
                         text-muted-foreground: muted text color from theme
                     */}
-                    <div className="flex-1 h-px bg-border max-w-xs"></div>
+                    <Separator className="flex-1" />
                 </div>
 
                 {/* Social Links */}
