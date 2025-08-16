@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-export const GithubLogo = (props: SVGProps<SVGSVGElement>) => (
+export const Github = (props: SVGProps<SVGSVGElement>) => (
   <svg
     role="img"
     viewBox="0 0 24 24"
@@ -15,7 +15,7 @@ export const GithubLogo = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const LinkedInLogo = (props: SVGProps<SVGSVGElement>) => (
+export const LinkedIn = (props: SVGProps<SVGSVGElement>) => (
   <svg
     role="img"
     viewBox="0 0 24 24"

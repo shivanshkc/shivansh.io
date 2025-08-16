@@ -1,55 +1,106 @@
 {
-    "brand": "Shivansh K.",
-    "name": "Shivansh Kuchchal",
+    "firstName": "Shivansh",
+    "lastName": "Kuchchal",
+    "branding": "Shivansh K.",
     "title": "Senior Software Engineer",
     "bio": "I build resilient and scalable backend services with Go. My expertise lies in solving complex problems in distributed systems, focusing on system architecture, performance, and delivering high-quality, reliable code.",
     "email": "shivanshbox@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/shivanshk",
+    "linkedin": "https://linkedin.com/in/shivanshk",
     "github": "https://github.com/shivanshkc",
     "experience": [
         {
             "company": "Red Hat Inc.",
             "title": "Senior Software Engineer",
-            "dates": "2021 - Present",
+            "period": "2021 - Present",
             "description": "I develop systems that integrate with AWS and Azure marketplace APIs, schedule jobs, and run state transitions to automate the management of Private Offers for Red Hat customers.",
-            "technologies": ["Go", "PostgreSQL", "REST APIs", "Kafka", "Transactions"]
+            "technologies": [
+                "Go",
+                "PostgreSQL",
+                "REST APIs",
+                "Kafka",
+                "Transactions"
+            ]
         },
         {
             "company": "KNNX Corp.",
             "title": "Software Engineer",
-            "dates": "2019 - 2021",
+            "period": "2019 - 2021",
             "description": "I built a multi-tenant business Rules Engine on Hyperledger Fabric, using Node.js to create secure REST APIs and a WebSocket handler for fast, safe rule evaluation.",
-            "technologies": ["Node.js", "Blockchain", "Multi-tenancy", "OAuth2", "CouchDB", "Websockets"]
+            "technologies": [
+                "Node.js",
+                "Blockchain",
+                "Multi-tenancy",
+                "OAuth2",
+                "CouchDB",
+                "Websockets"
+            ]
         }
     ],
     "projects": [
         {
             "name": "Kevlar",
             "description": "A novel consensus algorithm ready to compete with Paxos and Raft.",
-            "technologies": ["Distributed Systems", "Consensus Algorithms"],
-            "demo_link": "#TODO",
-            "github_link": "#TODO"
+            "image": "/placeholder.svg",
+            "technologies": [
+                "Distributed Systems",
+                "Consensus Algorithms"
+            ],
+            "github": "#"
         },
         {
             "name": "Rosenbridge",
             "description": "A distributed websocket hub for real-time communication.",
-            "technologies": ["Go", "Websockets", "gRPC", "MongoDB"],
-            "demo_link": "https://rosenchat.rudraksh.dev",
-            "github_link": "https://github.com/shivanshkc/rosenbridge"
+            "image": "/placeholder.svg",
+            "technologies": [
+                "Go",
+                "Websockets",
+                "gRPC",
+                "MongoDB"
+            ],
+            "github": "https://github.com/shivanshkc/rosenbridge"
         },
         {
             "name": "Authorizer",
             "description": "A PKCE-enabled OAuth implementation extensible for any identity provider.",
-            "technologies": ["OAuth2", "GCP", "PKCE", "Go", "PostgreSQL"],
-            "demo_link": "http://authorizer.rudraksh.dev",
-            "github_link": "https://github.com/shivanshkc/authorizer"
+            "image": "/placeholder.svg",
+            "technologies": [
+                "OAuth2",
+                "GCP",
+                "PKCE",
+                "Go",
+                "PostgreSQL"
+            ],
+            "github": "https://github.com/shivanshkc/authorizer"
         },
         {
             "name": "Lightshow",
             "description": "A highly concurrent raytracer written purely in Go.",
-            "technologies": ["Go", "Graphics", "Mathematics", "Concurrency"],
-            "demo_link": "https://github.com/shivanshkc/lightshow/blob/main/showcase/image.jpg",
-            "github_link": "https://github.com/shivanshkc/lightshow"
+            "image": "/placeholder.svg",
+            "technologies": [
+                "Go",
+                "Graphics",
+                "Mathematics",
+                "Concurrency"
+            ],
+            "github": "https://github.com/shivanshkc/lightshow"
+        }
+    ],
+    "skillset": [
+        {
+            "category": "Programming Languages",
+            "skills": ["Go", "TypeScript", "JavaScript", "Python", "TLA+"]
+        },
+        {
+            "category": "Databases",
+            "skills": ["PostgreSQL", "MongoDB", "CouchDB", "Redis", "Elasticsearch", "AWS S3"]
+        },
+        {
+            "category": "APIs & Protocols",
+            "skills": ["REST APIs", "gRPC", "Protocol Buffers", "WebSockets", "OAuth2", "PKCE"]
+        },
+        {
+            "category": "Other Technologies",
+            "skills": ["Apache Kafka", "Apache Zookeeper", "Docker", "Hyperledger Fabric Blockchain", "NGINX"]
         }
     ]
 }
