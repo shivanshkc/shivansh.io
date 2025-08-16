@@ -10,14 +10,13 @@ const Projects = () => {
     const projects: ProjectCardProps[] = content.projects;
 
     return (
-        <section id="experience" className="relative py-20 px-6">
+        <section id="projects" className="relative py-20 px-6">
             {/*
                 relative: position relative (for absolute positioned children)
                 py-20: padding top/bottom 5rem
                 px-6: padding left/right 1.5rem
             */}
             <div className="max-w-screen-md mx-auto">
-
                 {/*
                     max-w-screen-md: max width 768px
                     mx-auto: margin left/right auto (centers the element)
@@ -54,6 +53,12 @@ const Projects = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/*
+                        grid: display grid
+                        grid-cols-1: 1 column by default
+                        md:grid-cols-2: 2 columns on medium screens and up (responsive layout)
+                        gap-6: gap 1.5rem between grid items
+                    */}
                     {projects.map((project, index) => (
                         <ProjectCard key={index} {...project} />
                     ))}
