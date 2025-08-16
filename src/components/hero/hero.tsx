@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
 import Image from "next/image";
@@ -17,6 +19,23 @@ import { Button } from "@/components/ui/button";
  * @component
  */
 const Hero = () => {
+    /**
+     * Smooth scroll to section
+     */
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+
+        const sectionId = href.replace('#', '');
+        const element = document.getElementById(sectionId);
+
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <div className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
             {/*
@@ -124,7 +143,10 @@ const Hero = () => {
                             text-base: font size 1rem (16px)
                             asChild: render as child element (anchor tag)
                         */}
-                        <a href="#contact">
+                        <a
+                            href="#contact"
+                            onClick={(e) => scrollToSection(e, "#contact")}
+                        >
                             <Mail className="mr-2 h-5 w-5" />
                             {/* mr-2: margin right 0.5rem, h-5: height 1.25rem, w-5: width 1.25rem */}
                             Contact Me

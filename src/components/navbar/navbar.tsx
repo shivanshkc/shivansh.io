@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
@@ -26,6 +28,32 @@ const Navbar = () => {
         { label: "Contact", href: "#contact" }
     ];
 
+    /**
+     * Smooth scroll to section
+     */
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+
+        if (href === "#") {
+            // Scroll to top for branding/home link
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            return;
+        }
+
+        const sectionId = href.replace('#', '');
+        const element = document.getElementById(sectionId);
+
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <nav className="fixed top-6 left-0 right-0 z-5 px-4">
             {/*
@@ -51,7 +79,11 @@ const Navbar = () => {
                 */}
 
                 {/* Brand */}
-                <Link href="#" className="text-base sm:text-lg font-semibold tracking-tight hover:text-primary transition-colors">
+                <Link
+                    href="#"
+                    className="text-base sm:text-lg font-semibold tracking-tight hover:text-primary transition-colors"
+                    onClick={(e) => scrollToSection(e, "#")}
+                >
                     {/*
                         text-base: font size 1rem (16px)
                         sm:text-lg: font size 1.125rem (18px) on small screens and up
@@ -59,6 +91,7 @@ const Navbar = () => {
                         tracking-tight: letter spacing -0.025em
                         hover:text-primary: primary color on hover
                         transition-colors: smooth color transition
+                        onClick: custom smooth scroll handler
                     */}
                     {content.branding}
                 </Link>
@@ -78,7 +111,12 @@ const Navbar = () => {
                             {links.map(link => (
                                 <NavigationMenuItem key={link.href}>
                                     <NavigationMenuLink asChild>
-                                        <Link href={link.href}>{link.label}</Link>
+                                        <Link
+                                            href={link.href}
+                                            onClick={(e) => scrollToSection(e, link.href)}
+                                        >
+                                            {link.label}
+                                        </Link>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
                             ))}
