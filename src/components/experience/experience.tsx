@@ -22,7 +22,7 @@ const Experience = () => {
                     </p>
                 </div>
 
-                <div className="relative">
+                <div className="relative" role="list" aria-label="Professional experience timeline">
                     {experience.map((experience, index) => (
                         <ExperienceItem key={index} {...experience} />
                     ))}
@@ -45,16 +45,16 @@ interface ExperienceItemProps {
 
 const ExperienceItem = (props: ExperienceItemProps) => {
     return (
-        <div className="relative pl-8 not-last:pb-12">
+        <div className="relative pl-8 last:pb-0 pb-12" role="listitem">
             {/* Timeline line */}
-            <div className="absolute left-0 top-2.5 h-full w-[2px] bg-muted group-first:h-[calc(100%-24px)] group-first:top-6">
-                <div className="absolute h-3 w-3 -left-[5px] top-0 rounded-full border-2 border-primary bg-background" />
+            <div className="absolute left-0 top-2.5 h-full w-[2px] bg-muted last:hidden" aria-hidden="true">
+                <div className="absolute h-3 w-3 -left-[5px] top-0 rounded-full border-2 border-primary bg-background" aria-hidden="true" />
             </div>
 
             {/* Content */}
             <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                    <div className="flex-shrink-0 size-9 bg-accent rounded-full flex items-center justify-center">
+                    <div className="flex-shrink-0 size-9 bg-accent rounded-full flex items-center justify-center" aria-hidden="true">
                         <Building2 className="size-5 text-muted-foreground" />
                     </div>
                     <span className="text-lg font-semibold">{props.company}</span>
@@ -63,7 +63,7 @@ const ExperienceItem = (props: ExperienceItemProps) => {
                 <div>
                     <h3 className="text-xl font-medium">{props.title}</h3>
                     <div className="flex items-center gap-2 mt-1 text-sm">
-                        <Calendar className="size-4" />
+                        <Calendar className="size-4" aria-hidden="true" />
                         <span>{props.period}</span>
                     </div>
                 </div>
