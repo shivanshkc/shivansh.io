@@ -10,7 +10,7 @@ const Projects = () => {
     const projects: ProjectCardProps[] = content.projects;
 
     return (
-        <section id="projects" className="relative min-h-screen px-6 flex items-center justify-center">
+        <section id="projects" className="relative min-h-screen px-6 flex items-center justify-center scroll-mt-[20vh]">
             {/*
                 relative: position relative (for absolute positioned children)
                 min-h-screen: minimum height 100vh (full viewport height)
@@ -18,6 +18,7 @@ const Projects = () => {
                 flex: display flex
                 items-center: align items to center vertically
                 justify-center: center items horizontally
+                scroll-mt-[20vh]: scroll margin top 20% of viewport height (centers content better)
             */}
             <div className="max-w-screen-md mx-auto">
                 {/*
