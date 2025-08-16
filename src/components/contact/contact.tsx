@@ -40,8 +40,9 @@ const Contact = () => {
         // Open default email client
         window.location.href = mailtoLink;
 
-        // Reset form
-        setFormData({ name: "", email: "", message: "" });
+        // Do not reset form since it does not work.
+        // setFormData({ name: "", email: "", message: "" });
+        alert("Mailing is under development. Please check back soon!")
         setIsSubmitting(false);
     };
 
