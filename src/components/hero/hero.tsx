@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
  */
 const Hero = () => {
     return (
-        <div className="relative min-h-screen flex items-center justify-center px-6 pt-6 overflow-hidden">
+        <div className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
             {/*
                 relative: position relative (for absolute positioned children)
                 min-h-screen: minimum height 100vh (full viewport height)

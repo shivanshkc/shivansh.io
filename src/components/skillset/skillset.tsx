@@ -21,11 +21,14 @@ const Skillset = () => {
     };
 
     return (
-        <section id="skillset" className="relative py-20 px-6">
+        <section id="skillset" className="relative min-h-screen px-6 flex items-center justify-center">
             {/*
                 relative: position relative (for absolute positioned children)
-                py-20: padding top/bottom 5rem
+                min-h-screen: minimum height 100vh (full viewport height)
                 px-6: padding left/right 1.5rem
+                flex: display flex
+                items-center: align items to center vertically
+                justify-center: center items horizontally
             */}
             <div className="max-w-screen-md mx-auto">
                 {/*
