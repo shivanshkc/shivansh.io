@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { Github } from "@/components/icons";
-import { useState } from "react";
 
 const Projects = () => {
     const projects: ProjectCardProps[] = content.projects;
