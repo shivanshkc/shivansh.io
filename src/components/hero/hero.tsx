@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
 import Image from "next/image";
 import content from "~/public/content.json";
-import { Download, Mail } from "lucide-react";
+import { ExternalLink, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 /**
@@ -157,9 +157,9 @@ const Hero = () => {
                             variant="outline": outlined button style
                             Other classes same as above
                         */}
-                        <a href="/shivansh-resume.pdf" download>
-                            <Download className="mr-2 h-5 w-5" />
-                            Download CV
+                        <a href="/shivansh-resume.pdf" target="_blank">
+                            <ExternalLink className="mr-2 h-5 w-5" />
+                            Open Resume
                         </a>
                     </Button>
                 </div>
