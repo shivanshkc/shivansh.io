@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/shivanshkc/shivansh.io/compare/v1.0.0...v1.0.1) (2025-08-20)
+
+
+### Bug Fixes
+
+* **ci:** use .next/static instead of .next as cloudlfare pages dir ([b7842b5](https://github.com/shivanshkc/shivansh.io/commit/b7842b5fcc579c355eaffa8f210caba1e4c72eb0))
+
 # 1.0.0 (2025-08-20)
 
 
