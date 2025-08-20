@@ -1,0 +1,22 @@
+name: Lint
+description: Checks if the code is linted correctly.
+
+runs:
+  using: composite
+  steps:
+    # Setting up Node.js.
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/*'
+
+    # Setting up pnpm.
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 10
+
+    # Running build.
+    - name: Running build.
+      run: pnpm install --frozen-lockfile && pnpm lint
+      shell: bash

@@ -1,0 +1,23 @@
+name: CI
+on:
+  # Runs on all pull-request events on all branches.
+  pull_request:
+
+permissions:
+  # Can only read the source code.
+  contents: read
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/lint
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/build

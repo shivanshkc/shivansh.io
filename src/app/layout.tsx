@@ -17,11 +17,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // TODO: Add favicon.
   // TODO: Standardize name - one of Shivansh's Portfolio, Shivansh's Website, shivansh.io etc.
-  // TODO: Use GitHub actions for deployment instead of Cloudflare workers.
   // TODO: Use dedicated API for emailing in the contact form.
-  // TODO: Add standard CI/CD pipeline, including the semantic-release step.
+  // TODO: Dark mode.
 
   return (
     <html lang="en" className={`${geist.className} antialiased`}>
