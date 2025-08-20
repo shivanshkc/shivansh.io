@@ -17,7 +17,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // TODO: Standardize name - one of Shivansh's Portfolio, Shivansh's Website, shivansh.io etc.
+  // TODO: Update Readme.
   // TODO: Use dedicated API for emailing in the contact form.
   // TODO: Dark mode.
 
