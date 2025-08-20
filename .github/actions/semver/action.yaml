@@ -14,18 +14,12 @@ runs:
       with:
         node-version: 'lts/*'
 
-    # Setting up pnpm.
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v4
-      with:
-        version: 10
-
     - name: Release
       env:
         GITHUB_TOKEN: ${{ inputs.github-token }}
       run: |
-        pnpm add --global semantic-release @semantic-release/changelog @semantic-release/git
-        pnpm dlx semantic-release --branches main --plugins \
+        npm install --global semantic-release @semantic-release/changelog @semantic-release/git
+        npx semantic-release --branches main --plugins \
           @semantic-release/commit-analyzer \
           @semantic-release/release-notes-generator \
           @semantic-release/changelog \
