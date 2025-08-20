@@ -44,11 +44,10 @@ runs:
       run: pnpm build
 
     - name: Deploy to Cloudflare Pages
-      uses: cloudflare/pages-action@v1
+      uses: cloudflare/wrangler-action@v3
       with:
         apiToken: ${{ inputs.cloudflare-api-token }}
         accountId: ${{ inputs.cloudflare-account-id }}
-        projectName: ${{ inputs.project-name }}
-        directory: ${{ inputs.working-directory }}/${{ inputs.directory }}
+        command: pages deploy ${{ inputs.working-directory }}/${{ inputs.directory }} --project-name=${{ inputs.project-name }}
         gitHubToken: ${{ github.token }}
   
