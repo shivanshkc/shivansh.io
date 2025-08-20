@@ -14,7 +14,7 @@ inputs:
   directory:
     description: 'Directory containing the built files'
     required: false
-    default: '.next'
+    default: '.next/static'
   working-directory:
     description: 'Working directory to run commands from'
     required: false
