@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/shivanshkc/shivansh.io/compare/v1.0.1...v1.0.2) (2025-08-20)
+
+
+### Bug Fixes
+
+* **ci:** compatible build for next.js in deploy-cf-pages action ([93ad613](https://github.com/shivanshkc/shivansh.io/commit/93ad613f7773e7be437ca8078417dcd775c1064c))
+
 ## [1.0.1](https://github.com/shivanshkc/shivansh.io/compare/v1.0.0...v1.0.1) (2025-08-20)
 
 
