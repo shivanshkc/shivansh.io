@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Shivansh's Website",
@@ -19,11 +20,17 @@ export default function RootLayout({
 }>) {
   // TODO: Update Readme.
   // TODO: Use dedicated API for emailing in the contact form.
-  // TODO: Dark mode.
 
   return (
-    <html lang="en" className={`${geist.className} antialiased`}>
-      <body>{children}</body>
+    // next-themes may update the `class` on <html> after hydration (e.g. resolving "system"),
+    // which can cause benign hydration mismatch warnings.
+    // The "suppressHydrationWarning" flag suppresses these warnings.
+    <html lang="en" suppressHydrationWarning className={`${geist.className} antialiased`}>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
