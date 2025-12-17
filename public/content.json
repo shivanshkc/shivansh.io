@@ -45,6 +45,7 @@
                 "Distributed Systems",
                 "Consensus Algorithms"
             ],
+            "liveDemo": "#",
             "github": "#"
         },
         {
@@ -57,6 +58,7 @@
                 "gRPC",
                 "MongoDB"
             ],
+            "liveDemo": "#",
             "github": "https://github.com/shivanshkc/rosenbridge"
         },
         {
@@ -70,6 +72,7 @@
                 "Go",
                 "PostgreSQL"
             ],
+            "liveDemo": "#",
             "github": "https://github.com/shivanshkc/authorizer"
         },
         {
@@ -82,6 +85,7 @@
                 "Mathematics",
                 "Concurrency"
             ],
+            "liveDemo": "https://lightshow.shivansh.io",
             "github": "https://github.com/shivanshkc/lightshow"
         }
     ],

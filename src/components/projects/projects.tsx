@@ -84,10 +84,32 @@ interface ProjectCardProps {
     description: string;
     image: string;
     technologies: string[];
+    liveDemo: string;
     github: string;
 }
 
 const ProjectCard = (props: ProjectCardProps) => {
+    const hasLiveDemo = Boolean(props.liveDemo && props.liveDemo !== "#");
+
+    // Button to render if demo is not available.
+    const noDemoMessage = "This demo is currently under development. Please check back soon!";
+    const noDemoButton = (
+        <Button variant="default" className="rounded-full" onClick={() => alert(noDemoMessage)}>
+            <ExternalLink className="mr-1 h-4 w-4" />
+            Live Demo
+        </Button>
+    );
+
+    // Button to render if demo is available.
+    const demoButton = (
+        <Button variant="default" className="rounded-full" asChild>
+            <a href={props.liveDemo} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="mr-1 h-4 w-4" />
+                Live Demo
+            </a>
+        </Button>
+    );
+
     return (
         <Card className="group overflow-hidden transition-all hover:shadow-lg hover:border-primary/50 pt-0">
             {/*
@@ -164,20 +186,7 @@ const ProjectCard = (props: ProjectCardProps) => {
                     flex: display flex
                     gap-3: gap 0.75rem between child elements
                 */}
-                <Button
-                    variant="default"
-                    className="rounded-full"
-                    onClick={() => alert("This demo is currently under development. Please check back soon!")}
-                >
-                    {/*
-                        variant="default": primary button style
-                        rounded-full: fully rounded corners (pill shape)
-                        onClick: shows under development message when clicked
-                    */}
-                    <ExternalLink className="mr-1 h-4 w-4" />
-                    {/* mr-1: margin right 0.25rem, h-4: height 1rem, w-4: width 1rem */}
-                    Live Demo
-                </Button>
+                {hasLiveDemo ? demoButton : noDemoButton}
                 <Button
                     variant="outline"
                     className="rounded-full shadow-none"
