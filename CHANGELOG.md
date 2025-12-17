@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/shivanshkc/shivansh.io/compare/v1.0.2...v1.1.0) (2025-12-17)
+
+
+### Bug Fixes
+
+* **theme:** update next-themes type import ([57a631f](https://github.com/shivanshkc/shivansh.io/commit/57a631fcebca59d3ee96c0b90625817a70a73b88))
+
+
+### Features
+
+* **projects:** add Lightshow project image ([688478e](https://github.com/shivanshkc/shivansh.io/commit/688478efa62c0b8a6be5043314c3151b61cf53f7))
+* **projects:** add live demo links to project cards ([584bf16](https://github.com/shivanshkc/shivansh.io/commit/584bf16fed94da83280798d9193684b3af3ee843))
+* **theme:** add system-based light/dark toggle ([2fd74a6](https://github.com/shivanshkc/shivansh.io/commit/2fd74a6f54c799eb27afb0df281fa62452cbf88d))
+
 ## [1.0.2](https://github.com/shivanshkc/shivansh.io/compare/v1.0.1...v1.0.2) (2025-08-20)
 
 
