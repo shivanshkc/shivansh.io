@@ -6,6 +6,7 @@ import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuL
 import { Button } from "@/components/ui/button";
 import { Github, LinkedIn } from "@/components/icons";
 import content from "~/public/content.json";
+import { ModeToggle } from "@/components/mode-toggle";
 
 /**
  * Simple Navbar Component
@@ -153,6 +154,7 @@ const Navbar = () => {
                             <Github className="h-5 w-5" />
                         </Button>
                     </Link>
+                    <ModeToggle />
                 </div>
             </div>
         </nav>
