@@ -77,13 +77,12 @@
         },
         {
             "name": "Lightshow",
-            "description": "A highly concurrent raytracer written purely in Go.",
-            "image": "/placeholder.svg",
+            "description": "A WebGPU based Raytracing Playground.",
+            "image": "/lightshow.png",
             "technologies": [
-                "Go",
+                "WebGPU",
                 "Graphics",
-                "Mathematics",
-                "Concurrency"
+                "Mathematics"
             ],
             "liveDemo": "https://lightshow.shivansh.io",
             "github": "https://github.com/shivanshkc/lightshow"
