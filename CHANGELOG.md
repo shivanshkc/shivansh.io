@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/shivanshkc/shivansh.io/compare/v1.1.0...v1.2.0) (2026-03-16)
+
+
+### Features
+
+* add Rosenbridge live demo and photo ([910b2b2](https://github.com/shivanshkc/shivansh.io/commit/910b2b2ade21be281e67db42b06819ec8a807b23))
+
 # [1.1.0](https://github.com/shivanshkc/shivansh.io/compare/v1.0.2...v1.1.0) (2025-12-17)
 
 
