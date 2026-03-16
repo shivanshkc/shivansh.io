@@ -50,15 +50,14 @@
         },
         {
             "name": "Rosenbridge",
-            "description": "A distributed websocket hub for real-time communication.",
-            "image": "/placeholder.svg",
+            "description": "A dependency-free WebSocket message broker that compiles to a single binary.",
+            "image": "/rosenapp.png",
             "technologies": [
                 "Go",
                 "Websockets",
-                "gRPC",
-                "MongoDB"
+                "Real-time messaging"
             ],
-            "liveDemo": "#",
+            "liveDemo": "https://rosenbridge.shivansh.io",
             "github": "https://github.com/shivanshkc/rosenbridge"
         },
         {
