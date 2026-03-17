@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/shivanshkc/shivansh.io/compare/v1.2.0...v1.3.0) (2026-03-17)
+
+
+### Features
+
+* update resume ([2b3ef5c](https://github.com/shivanshkc/shivansh.io/commit/2b3ef5cf583faa2da4dffb1955d406ee4087834f))
+
 # [1.2.0](https://github.com/shivanshkc/shivansh.io/compare/v1.1.0...v1.2.0) (2026-03-16)
 
 
