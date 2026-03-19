@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/shivanshkc/shivansh.io/compare/v1.3.1...v1.4.0) (2026-03-19)
+
+
+### Bug Fixes
+
+* resend client is created at runtime ([80e25e2](https://github.com/shivanshkc/shivansh.io/commit/80e25e213810436fbd8e0297fad7f4e58743a4fa))
+
+
+### Features
+
+* add mailing functionality ([c828c51](https://github.com/shivanshkc/shivansh.io/commit/c828c513d227d03af04744cce7d6e783bdf7c4fd))
+* use toaster instead of html alert ([1e0aabf](https://github.com/shivanshkc/shivansh.io/commit/1e0aabf38c81f0e7ad4139f24814af25d857cb55))
+
 ## [1.3.1](https://github.com/shivanshkc/shivansh.io/compare/v1.3.0...v1.3.1) (2026-03-19)
 
 
