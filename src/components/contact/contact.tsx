@@ -32,18 +32,24 @@ const Contact = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Create mailto link with form data
-        const subject = `Contact from ${formData.name}`;
-        const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-        const mailtoLink = `mailto:${content.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
 
-        // Open default email client
-        window.location.href = mailtoLink;
+            if (!response.ok) {
+                throw new Error("Failed to send message.");
+            }
 
-        // Do not reset form since it does not work.
-        // setFormData({ name: "", email: "", message: "" });
-        alert("Mailing is under development. Please check back soon!")
-        setIsSubmitting(false);
+            setFormData({ name: "", email: "", message: "" });
+            alert("Message sent successfully!");
+        } catch {
+            alert("Failed to send message. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
