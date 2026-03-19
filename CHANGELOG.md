@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/shivanshkc/shivansh.io/compare/v1.3.0...v1.3.1) (2026-03-19)
+
+
+### Bug Fixes
+
+* improved rosenbridge image ([622b57c](https://github.com/shivanshkc/shivansh.io/commit/622b57cd54627d4557bc119c9ec2783c0b2cec72))
+
 # [1.3.0](https://github.com/shivanshkc/shivansh.io/compare/v1.2.0...v1.3.0) (2026-03-17)
 
 
