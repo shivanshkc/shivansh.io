@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider, ThemedToaster } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Shivansh's Website",
@@ -29,6 +29,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
+          <ThemedToaster />
         </ThemeProvider>
       </body>
     </html>
