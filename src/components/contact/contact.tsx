@@ -45,9 +45,9 @@ const Contact = () => {
             }
 
             setFormData({ name: "", email: "", message: "" });
-            toast.success("Message sent successfully!");
+            toast.success("Your mail has been sent.");
         } catch {
-            toast.error("Failed to send message. Please try again.");
+            toast.error("Failed to send mail. Please try again.");
         } finally {
             setIsSubmitting(false);
         }
