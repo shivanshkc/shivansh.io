@@ -11,6 +11,7 @@ import { Github, LinkedIn } from "@/components/icons";
 import { Mail, Send } from "lucide-react";
 import content from "~/public/content.json";
 import { useState } from "react";
+import { toast } from "sonner";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -44,9 +45,9 @@ const Contact = () => {
             }
 
             setFormData({ name: "", email: "", message: "" });
-            alert("Message sent successfully!");
+            toast.success("Message sent successfully!");
         } catch {
-            alert("Failed to send message. Please try again.");
+            toast.error("Failed to send message. Please try again.");
         } finally {
             setIsSubmitting(false);
         }
