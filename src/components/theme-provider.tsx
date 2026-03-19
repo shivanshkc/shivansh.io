@@ -11,7 +11,7 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
 
 export function ThemedToaster() {
   const { resolvedTheme } = useTheme()
-  return <Toaster closeButton theme={resolvedTheme as "light" | "dark"} />
+  return <Toaster duration={2000} theme={resolvedTheme as "light" | "dark"} />
 }
 
 
