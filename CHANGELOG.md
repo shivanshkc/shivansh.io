@@ -1,3 +1,9 @@
+## [1.5.1](https://github.com/shivanshkc/shivansh.io/compare/v1.5.0...v1.5.1) (2026-11-18)
+
+### Bug Fixes
+
+* talk video card size adjustments ([4c5639a](https://github.com/shivanshkc/shivansh.io/commit/4c5639a1408a17e3448fa0ac51b9eb5ee57309b6))
+
 # [1.5.0](https://github.com/shivanshkc/shivansh.io/compare/v1.4.0...v1.5.0) (2026-11-18)
 
 ### Features
