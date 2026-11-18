@@ -1,3 +1,9 @@
+# [1.5.0](https://github.com/shivanshkc/shivansh.io/compare/v1.4.0...v1.5.0) (2026-11-18)
+
+### Features
+
+* add the talks section ([1469c27](https://github.com/shivanshkc/shivansh.io/commit/1469c27e57c93e90fa3d99e3fa753a9153792c17))
+
 # [1.4.0](https://github.com/shivanshkc/shivansh.io/compare/v1.3.1...v1.4.0) (2026-03-19)
 
 
