@@ -54,11 +54,13 @@ const Talks = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-6">
+                <div className="grid grid-cols-1 gap-6 max-w-lg mx-auto">
                     {/*
                         grid: display grid
-                        grid-cols-1: 1 column layout for full-width video players
+                        grid-cols-1: 1 column layout for video players
                         gap-6: gap 1.5rem between grid items
+                        max-w-lg: max width 32rem (512px) to scale down card while preserving 16:9 aspect ratio
+                        mx-auto: centers the grid horizontally
                     */}
                     {talks.map((talk, index) => (
                         <TalkCard key={index} {...talk} />
@@ -136,23 +138,25 @@ const TalkCard = (props: TalkItemProps) => {
             </div>
 
             <CardContent className="flex flex-col">
-                <h3 className="text-xl font-semibold">{props.title}</h3>
+                <h3 className="text-sm sm:text-base font-semibold">{props.title}</h3>
                 {/*
-                    text-xl: font size 1.25rem (20px)
+                    text-sm: font size 0.875rem (14px)
+                    sm:text-base: font size 1rem (16px) on small screens and up
                     font-semibold: font weight 600
                 */}
 
-                <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2 mt-1.5 text-xs sm:text-sm text-muted-foreground">
                     {/*
                         flex: display flex
                         items-center: align items to center vertically
                         gap-2: gap 0.5rem between child elements
-                        mt-2: margin top 0.5rem
-                        text-sm: font size 0.875rem (14px)
+                        mt-1.5: margin top 0.375rem
+                        text-xs: font size 0.75rem (12px)
+                        sm:text-sm: font size 0.875rem (14px) on small screens and up
                         text-muted-foreground: muted text color from theme
                     */}
-                    <MapPin className="size-4" aria-hidden="true" />
-                    {/* size-4: width and height 1rem */}
+                    <MapPin className="size-3.5" aria-hidden="true" />
+                    {/* size-3.5: width and height 0.875rem */}
                     <span>{props.location}</span>
                 </div>
             </CardContent>
