@@ -23,6 +23,7 @@ const Navbar = () => {
      * Navigation links
      */
     const links = [
+        { label: "Talks", href: "#talks" },
         { label: "Experience", href: "#experience" },
         { label: "Projects", href: "#projects" },
         { label: "Skillset", href: "#skillset" },
